@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: promiseigbopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: promiseigbopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: promiseigbopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: promiseigbopipelinesjavascriptdocker 
+          image: newdemoazurecr.azurecr.io/promiseigbopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
